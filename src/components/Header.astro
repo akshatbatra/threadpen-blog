@@ -1,0 +1,93 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header>
+    <img id="logo" src='/logo.png'></img>
+    <h2><a>{SITE_TITLE}</a></h2>
+	<nav>
+		<div class="internal-links">
+			<HeaderLink href="/blog">
+			  <ion-icon name='home'></ion-icon>
+			</HeaderLink>
+		</div>
+	</nav>
+</header>
+<style>
+	header {
+		display: flex;
+		flex-direction: row;
+		margin: 0;
+		padding: 0 1em;
+		align-items: center;
+		background: white;
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+	}
+	#logo {
+		position: absolute;
+		width: 55px;
+		height: 55px;
+	}
+	h2 {
+		position: absolute;
+		margin-left: 60px;
+		margin-bottom: 0px;
+		font-size: 1.5em;
+	}
+
+	h2 a {
+		color: #058e96;
+	}
+	h2 a.active {
+		text-decoration: none;
+	}
+	nav {
+		display: flex;
+
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+	nav a {
+		padding: 1em 0.5em;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+	}
+	nav a.active {
+		text-decoration: none;
+		border-bottom-color: var(--accent);
+	}
+	ion-icon[name="home"] {
+		position: relative;
+		top: 7px;
+		font-size: 25px;
+	}
+	.social-links,
+	.social-links a {
+		display: flex;
+	}
+	@media (max-width: 720px) {
+		.social-links {
+			display: none;
+		}
+		h2 {
+			font-size: 1.2em;
+		}
+	}
+	@media (max-width: 320px) {
+		header {
+			flex-direction: column;
+		}
+		h2 {
+			font-size: 1.9em;
+		}
+		nav {
+			margin-top: 30px;
+		}
+		nav a {
+			padding: 0.2em 0.5em;
+		}
+	}
+</style>
