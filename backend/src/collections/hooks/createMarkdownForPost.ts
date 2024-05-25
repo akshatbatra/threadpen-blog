@@ -40,7 +40,6 @@ export default async ({doc,req,previousDoc,operation}) => {
               id: node.value.id
             });
             imageURLMap[node.value.id] = imgData.url;
-            console.log(node);
           }
         }
         const imgTransformer = {
@@ -61,7 +60,7 @@ export default async ({doc,req,previousDoc,operation}) => {
         let fullContent = frontMatter + markdown;
         let fileHandle;
         try {
-          fileHandle = await open(`C:/Users/ACS/Desktop/threadpen-blog/src/content/blog/${doc.slug}.md`, "w+");
+          fileHandle = await open(`C:/Users/ACS/Desktop/threadpen-blog/Workware/src/content/blog/${doc.slug}.md`, "w+");
           await fileHandle.write(fullContent);
         } catch (e) {
           console.log(e);

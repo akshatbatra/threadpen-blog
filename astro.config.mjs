@@ -5,10 +5,10 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://www.threadpen.com',
 	integrations: [mdx(), sitemap()],
 	redirects: {
 		'/': 'blog',
 	},
-	outDir: '../dist',
+	outDir: '../dist/dist',
 });
