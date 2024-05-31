@@ -11,7 +11,7 @@ export default async ({doc,req,previousDoc,operation}) => {
     if (operation == "create" || operation == "update") {
         let frontMatter = "";
         frontMatter += `title: '${doc.title}'\n`;
-        frontMatter += `description: '${doc.description}'\n`;
+        frontMatter += `description: "${doc.description}"\n`;
         frontMatter += `pubDate: '${doc.createdAt}'\n`;
         try{
           let {filename} = await req.payload.findByID({collection: 'cover-photos', id: doc.coverPhoto});
