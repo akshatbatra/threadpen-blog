@@ -1,5 +1,5 @@
 ---
-title: 'The Not-So-Dissimilar Love Lives of Bill Gates and Jeff Bezos'
+title: "The Not-So-Dissimilar Love Lives of Bill Gates and Jeff Bezos"
 description: "Bill Gates and Jeff Bezos' love life trajectories have a lot of similarities after all. Let's delve into the details of their past complications and present partners."
 pubDate: '2024-05-31T10:29:55.528Z'
 heroImage: '/cover-photos/Bill-Jeff-Partners-1.jpg'
